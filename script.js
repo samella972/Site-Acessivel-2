@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
    const opcoesdeacessibilidade = document.getElementById('opcoes-acessibilidade')
 
 
-   botaodeacessibilidade.addEventListener('click' ({
+   botaodeacessibilidade.addEventListener('click') ({
 
-    botaodeacessibilidade, classlist, toggle }) => { }('rotacao-botao')
+    botaodeacessibilidade, classlist, toggle }) = { }('rotacao-botao')
     opcoesdeacessibilidade.classList.toggle('apresenta-lista')
-   }))
+   })
     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
@@ -25,4 +25,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
-})
