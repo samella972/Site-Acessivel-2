@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-   const botaodeacessibilidade = document.getElementById('botao-acessibilidade')
-   const opcoesdeacessibilidade = document.getElementById('opcoes-acessibilidade')
+    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
+    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
 
+    botaoDeAcessibilidade.addEventListener('click', function () {
+        botaoDeAcessibilidade.classList.toggle('rotacao-botao');
+        opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
 
-   botaodeacessibilidade.addEventListener('click') ({
+        const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+        botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
 
-    botaodeacessibilidade, classlist, toggle }) = { }('rotacao-botao')
-    opcoesdeacessibilidade.classList.toggle('apresenta-lista')
-   })
+    })
+
     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
+
+    const alternaContraste = document.getElementById('alterna-contraste')
 
     let tamanhoAtualFonte = 1;
 
@@ -25,3 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
+    alternaContraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste')
+})   
+})
